@@ -1,8 +1,13 @@
 const boxes = document.querySelectorAll(".box");
 const gameInfo = document.querySelector(".game-info");
 const newGameBtn = document.querySelector(".btn");
+//data valie
+const player1 = document.querySelector("[data-value1]");
+const player2 = document.querySelector("[data-value2]");
 let currentPlayer;
 let gameGrid;
+let value1 = 0;
+let value2 = 0;
 
 const winningPositions = [
   [0, 1, 2],
@@ -18,6 +23,7 @@ const winningPositions = [
 function initGame() {
   currentPlayer = "X";
   gameGrid = ["", "", "", "", "", "", "", "", ""];
+
   //butoon hide
   boxes.forEach((box, index) => {
     box.innerText = "";
@@ -91,8 +97,17 @@ function checkGameOver() {
   if (answer !== "") {
     gameInfo.innerText = `Winner Player :${answer}`;
     newGameBtn.classList.add("active");
+    if (answer == "X") {
+      value1++;
+      player1.innerText = value1;
+    } else {
+      value2++;
+      player2.innerText = value2;
+    }
+
     return;
   }
+
   //handle tie case
   let filledCount = 0;
   gameGrid.forEach((box) => {

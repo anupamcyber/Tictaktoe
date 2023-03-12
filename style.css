@@ -93,3 +93,53 @@
 .win {
   background-color: rgb(90, 236, 90);
 }
+.player1 {
+  color: darkgray;
+  margin-top: 20%;
+  margin-left: 5%;
+  border: 1px solid rgb(238, 230, 230);
+  height: 300px;
+  width: 100x;
+  padding: 10px;
+}
+.outer {
+  display: flex;
+
+  background-color: rgb(18, 65, 65);
+}
+.player2 {
+  margin-top: 20%;
+  margin-right: 5%;
+  color: darkgray;
+  height: 300px;
+
+  width: 100x;
+  padding: 10px;
+  border: 1px solid rgb(238, 230, 230);
+}
+
+h1 {
+  border-bottom: 10px;
+  border-color: aquamarine;
+}
+.player1 p {
+  font-size: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  aspect-ratio: 1/1;
+}
+.player2 p {
+  font-size: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+}
+.btn1 {
+  position: relative;
+  display: none;
+}
+.btn.active {
+}
